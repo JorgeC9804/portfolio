@@ -94,15 +94,15 @@
     width: 80%;
     left: 5%;
     z-index: 10;
-    padding: 15px;
   }
 }
 
-@media (max-width: 600px) {
+@media (max-width: 725px) {
   /* ---------------- main ----------------- */
   .rename-1 {
     background-color: sienna;
     width: 90%;
+    left: 0;
     z-index: 10;
   }
   /* --------------- horizontal ------------------ */
@@ -119,8 +119,7 @@
 @media (max-width: 400px) {
   .rename-1 {
     background-color: sienna;
-    width: 100%;
+    width: 95%;
     z-index: 10;
-    padding: 15px;
   }
 }
