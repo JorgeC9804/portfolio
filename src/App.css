@@ -1,38 +1,126 @@
-.App {
-  text-align: center;
+.shell {
+  height: 100vh;
+  width: 100%;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/* --------------------- main ----------------------- */
+.main {
+  width: 100%;
+  background-color: rgb(235, 161, 66);
+}
+.rename-1 {
+  background-color: sienna;
+  width: 80%;
+  top: 15vh;
+  height: 85vh;
+  z-index: 10;
+}
+.test {
+  height: 100vh;
+  top: 15vh;
+  border: 2px solid;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+/* ---------------- position ----------------- */
+.absolute {
+  position: absolute;
+}
+.relative {
+  position: relative;
+}
+.fixed {
+  position: fixed;
+}
+.t-10 {
+  top: 100vh;
+}
+.l-1 {
+  left: 15px;
+}
+.l-1-0 {
+  left: 10%;
+}
+.l-1-5 {
+  left: 15%;
+}
+.l-2 {
+  left: 30px;
+}
+.l-2-0 {
+  left: 20%;
+}
+.l-3 {
+  left: 45px;
+}
+.l-4 {
+  left: 60px;
+}
+.l-5 {
+  left: 75px;
+}
+.l-6 {
+  left: 90px;
+}
+.l-7 {
+  left: 105px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+/* ---------------- settings ----------------- */
+.dy {
   display: flex;
+}
+.column {
   flex-direction: column;
+}
+.row {
+  flex-direction: row;
+}
+.center-h {
+  align-items: center;
+}
+.center-w {
+  justify-content: center;
+}
+.center {
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
-}
+/* ---------------- media ----------------- */
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+@media (max-width: 925px) {
+  .rename-1 {
+    background-color: sienna;
+    width: 80%;
+    left: 5%;
+    z-index: 10;
+    padding: 15px;
   }
-  to {
-    transform: rotate(360deg);
+}
+
+@media (max-width: 600px) {
+  /* ---------------- main ----------------- */
+  .rename-1 {
+    background-color: sienna;
+    width: 90%;
+    z-index: 10;
+  }
+  /* --------------- horizontal ------------------ */
+  .box-h {
+    display: none;
+  }
+
+  /* --------------- vertical ------------------ */
+  .box-v {
+    display: none;
+  }
+}
+
+@media (max-width: 400px) {
+  .rename-1 {
+    background-color: sienna;
+    width: 100%;
+    z-index: 10;
+    padding: 15px;
   }
 }
