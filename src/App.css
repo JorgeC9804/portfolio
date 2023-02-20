@@ -1,3 +1,17 @@
+/* --------------------- body ----------------------- */
+html {
+  scroll-behavior: smooth;
+}
+body::-webkit-scrollbar {
+  width: 5px;
+  background: rgb(235, 161, 66);
+}
+body::-webkit-scrollbar-thumb {
+  background-color: #00000048;
+  border-radius: 5px;
+}
+/* --------------------- shell ----------------------- */
+
 .shell {
   height: 100vh;
   width: 100%;
@@ -5,20 +19,120 @@
 
 /* --------------------- main ----------------------- */
 .main {
+  position: absolute;
   width: 100%;
+  /* height: 100vh; */
   background-color: rgb(235, 161, 66);
+  /* border: 1px solid; */
+  box-sizing: border-box;
+  overflow: auto;
 }
-.rename-1 {
+.section-1 {
+  background-color: rgb(131, 45, 160);
+  width: 80%;
+  top: 15vh;
+  height: 85vh;
+  z-index: 100;
+}
+.section-1-name {
+  background-color: yellow;
+  width: 50%;
+  height: 100%;
+}
+.section-2 {
+  width: 80%;
+  height: 80vh;
+  background-color: seagreen;
+  z-index: 100;
+}
+.section-3 {
+  width: 100%;
+  height: 100vh;
+  background-color: rgb(46, 106, 139);
+  z-index: 100;
+}
+.name-m {
+  position: relative;
+  display: flex;
+  width: 425px;
+  height: 200px;
+  /* background-color: rgb(8, 222, 18); */
+  background-color: rgb(222, 112, 33);
+  transition: 0.3s;
+  transform: skewY(-15deg);
+  border-radius: 20px;
+  box-shadow: -30px -30px 10px rgba(0, 0, 0, 0.801);
+  /* padding: 30px; */
+  padding: 15px;
+  font-weight: 100;
+  font-family: "Courier New", Courier, monospace;
+  font-size: 50px;
+  box-sizing: border-box;
+  animation-name: name-m;
+  animation-duration: 3s;
+  top: 20px;
+  left: 40px;
+  color: #00257a86;
+}
+.my-name {
+  font-weight: 0;
+  font-size: 55px;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+}
+.information-m {
+  position: relative;
+  top: 100px;
+  left: 40px;
+  transform: skewY(-15deg);
+  background-color: rgb(255, 160, 71);
+  width: 500px;
+  height: 120px;
+  box-shadow: -30px -30px 10px rgba(0, 0, 0, 0.801);
+  border-radius: 15px;
+  padding: 15px;
+  font-family: "Courier New", Courier, monospace;
+  font-size: 25px;
+  animation-name: information-m;
+  animation-duration: 5s;
+}
+
+/* ---------------- test ---------------- */
+.test {
+  border: 1px solid;
+  box-sizing: border-box;
+}
+.test-1 {
+  width: 400px;
+  height: 400px;
+  background-color: rgba(11, 155, 119, 0.651);
+  overflow: auto;
+  z-index: 200;
+}
+.test-1::-webkit-scrollbar {
+  width: 7px;
+}
+.test-1::-webkit-scrollbar-thumb {
+  background-color: #000;
+}
+.test-1::-webkit-scrollbar-thumb:hover {
+  width: 20px;
+}
+
+/* ---------------- header ---------------- */
+.section-1-h {
   background-color: sienna;
   width: 80%;
   top: 15vh;
   height: 85vh;
   z-index: 10;
 }
-.test {
-  height: 100vh;
-  top: 15vh;
-  border: 2px solid;
+
+.section-2-h {
+  width: 80%;
+  height: 80vh;
+  background-color: seagreen;
+  z-index: 10;
 }
 
 /* ---------------- position ----------------- */
@@ -30,6 +144,15 @@
 }
 .fixed {
   position: fixed;
+}
+.t-1 {
+  top: 10%;
+}
+.t-2 {
+  top: 20%;
+}
+.t-3 {
+  top: 30%;
 }
 .t-10 {
   top: 100vh;
@@ -89,37 +212,87 @@
 /* ---------------- media ----------------- */
 
 @media (max-width: 925px) {
-  .rename-1 {
-    background-color: sienna;
-    width: 80%;
+  .section-1 {
     left: 5%;
-    z-index: 10;
+  }
+  .section-2 {
+    left: 5%;
   }
 }
 
-@media (max-width: 725px) {
+@media (max-width: 700px) {
   /* ---------------- main ----------------- */
-  .rename-1 {
-    background-color: sienna;
-    width: 90%;
-    left: 0;
-    z-index: 10;
+  .section-1 {
+    left: 8%;
   }
-  /* --------------- horizontal ------------------ */
-  .box-h {
-    display: none;
+  .section-2 {
+    left: 8%;
   }
+  .name-m {
+    width: 260px;
+    height: 100px;
+    font-size: 30px;
+    box-shadow: -15px -15px 7px rgba(0, 0, 0, 0.801);
+  }
+  .my-name {
+    font-size: 30px;
+  }
+  .information-m {
+    width: 260px;
+    height: 50px;
+    font-size: 15px;
+    box-shadow: -15px -15px 7px rgba(0, 0, 0, 0.801);
+  }
+}
 
-  /* --------------- vertical ------------------ */
-  .box-v {
+@media (max-width: 600px) {
+  /* ---------------- main ----------------- */
+  .header {
     display: none;
+  }
+  .section-1 {
+    width: 95%;
+    left: 0;
+  }
+  .section-2 {
+    width: 95%;
+    left: 0;
+  }
+  .section-1-h {
+    width: 95%;
+  }
+  .section-2-h {
+    width: 95%;
   }
 }
 
 @media (max-width: 400px) {
-  .rename-1 {
-    background-color: sienna;
-    width: 95%;
-    z-index: 10;
+}
+
+@keyframes name-m {
+  0% {
+    position: relative;
+    left: 0;
+    top: 0;
+    box-shadow: 0px 0px 0px;
+  }
+  50% {
+    position: relative;
+    left: 0;
+    top: 0;
+    box-shadow: 0px 0px 0px;
+  }
+}
+
+@keyframes information-m {
+  0% {
+    top: 0;
+    left: 0;
+    box-shadow: 0px 0px 0px rgba(0, 0, 0, 0.801);
+  }
+  50% {
+    top: 80px;
+    left: 0;
+    box-shadow: 0px 0px 0px rgba(0, 0, 0, 0.801);
   }
 }
