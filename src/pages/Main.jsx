@@ -20,7 +20,7 @@ const Main = () => {
               </div>
             </div>
             <div className="dy center information-m">
-              I'm Jorge Castro a front-end interactive and back-end developer
+              I'm Jorge Castro a interactive front-end and back-end developer
               from Mexico.
             </div>
             {/* <a href="#saaas" className="relative t-3">
