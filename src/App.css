@@ -22,21 +22,22 @@ body::-webkit-scrollbar-thumb {
   position: absolute;
   width: 100%;
   /* height: 100vh; */
-  background-color: rgb(235, 161, 66);
+  /* background-color: rgb(67, 65, 64); */
   /* border: 1px solid; */
   box-sizing: border-box;
   overflow: auto;
 }
+/*  here  */
 .section-1 {
-  background-color: rgb(131, 45, 160);
+  /* background-color: rgb(131, 45, 160); */
   width: 80%;
   top: 15vh;
   height: 85vh;
   z-index: 100;
 }
 .section-1-name {
-  background-color: yellow;
-  width: 50%;
+  /* background-color: yellow; */
+  width: 100%;
   height: 100%;
 }
 .section-2 {
@@ -57,11 +58,11 @@ body::-webkit-scrollbar-thumb {
   width: 425px;
   height: 200px;
   /* background-color: rgb(8, 222, 18); */
-  background-color: rgb(222, 112, 33);
+  /* background-color: rgb(222, 112, 33); */
   transition: 0.3s;
   transform: skewY(-15deg);
   border-radius: 20px;
-  box-shadow: -30px -30px 10px rgba(0, 0, 0, 0.801);
+  box-shadow: -20px -20px 10px rgba(5, 26, 100, 0.489);
   /* padding: 30px; */
   padding: 15px;
   font-weight: 100;
@@ -80,21 +81,22 @@ body::-webkit-scrollbar-thumb {
   font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
     "Lucida Sans", Arial, sans-serif;
 }
+/*  here  */
 .information-m {
   position: relative;
   top: 100px;
   left: 40px;
   transform: skewY(-15deg);
-  background-color: rgb(255, 160, 71);
   width: 500px;
   height: 120px;
-  box-shadow: -30px -30px 10px rgba(0, 0, 0, 0.801);
+  box-shadow: -20px -20px 10px rgba(5, 26, 100, 0.493);
   border-radius: 15px;
   padding: 15px;
   font-family: "Courier New", Courier, monospace;
   font-size: 25px;
   animation-name: information-m;
   animation-duration: 5s;
+  color: #00257ad0;
 }
 
 /* ---------------- test ---------------- */
@@ -232,7 +234,7 @@ body::-webkit-scrollbar-thumb {
     width: 260px;
     height: 100px;
     font-size: 30px;
-    box-shadow: -15px -15px 7px rgba(0, 0, 0, 0.801);
+    box-shadow: -15px -15px 7px rgba(5, 26, 100, 0.537);
   }
   .my-name {
     font-size: 30px;
@@ -241,7 +243,7 @@ body::-webkit-scrollbar-thumb {
     width: 260px;
     height: 50px;
     font-size: 15px;
-    box-shadow: -15px -15px 7px rgba(0, 0, 0, 0.801);
+    box-shadow: -15px -15px 7px rgba(5, 26, 100, 0.546);
   }
 }
 
