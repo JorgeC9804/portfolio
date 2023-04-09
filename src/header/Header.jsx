@@ -1,10 +1,10 @@
-import React, { useContext } from "react";
+import React from "react";
 import { Link } from "react-router-dom";
-import Context from "../context/Context";
+// import Context from "../context/Context";
 import "./header.styles.css";
 
 const Header = () => {
-  const { state, dispatch } = useContext(Context);
+  // const { state, dispatch } = useContext(Context);
 
   return (
     <section>

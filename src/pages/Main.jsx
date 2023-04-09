@@ -7,30 +7,29 @@ import "./main.style.css";
 
 const Main = () => {
   // const { state } = useContext(Context);
-  const aux = "Hi, I´m Jorge Castro !".split("");
-  let count = 0;
   const [hello, setHello] = useState("");
 
   /**
    * necesito renderizar solo una parte
    */
 
-  const handleShow = () => {
-    setHello("");
-    const interval = setInterval(() => {
-      console.log(aux[count]);
-      console.log(count);
-      count = count + 1;
-    }, 1000);
-
-    setTimeout(() => {
-      clearInterval(interval);
-    }, 5000);
-  };
-
   useEffect(() => {
+    const aux = "Hi, I´m Jorge Castro !".split("");
+    let count = 0;
+    const handleShow = () => {
+      setHello("");
+      const interval = setInterval(() => {
+        console.log(aux[count]);
+        console.log(count);
+        count = count + 1;
+      }, 1000);
+
+      setTimeout(() => {
+        clearInterval(interval);
+      }, 5000);
+    };
     handleShow();
-  }, [hello]);
+  }, []);
 
   return (
     <div className="sec-main dy center">
