@@ -23,7 +23,7 @@ const Reducer = initialState => {
 };
 
 const ContextProvider = ({ children }) => {
-  const { state, dispatch } = Reducer([]);
+  const { state, dispatch } = Reducer(false);
 
   const options = {
     state,

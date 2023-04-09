@@ -7,30 +7,21 @@ const Header = () => {
   const { state, dispatch } = useContext(Context);
 
   return (
-    <div className="dy fixed header">
-      <div className={`dy center ${state ? `box-v column` : `box-h row`}`}>
-        <Link to="/" className="link dy center">
-          main
-        </Link>
-        <Link to="/next" className="link dy center">
-          next
-        </Link>
-        <Link to="/next-2" className="link dy center">
-          next
-        </Link>
-        <button
-          onClick={() =>
-            dispatch({
-              type: state ? "TRUE" : "FALSE",
-              payload: { status: state ? false : true },
-            })
-          }
-          className="btn"
-        >
-          change
-        </button>
+    <section>
+      <div className="header-h">
+        <div className={`dy center row click-h`}>
+          <Link to="/" className={`dy center link l-m-h`}>
+            main
+          </Link>
+          <Link to="/next" className={`dy center link l-m-h`}>
+            next
+          </Link>
+          <Link to="/next-2" className={`dy center link l-m-h`}>
+            next 2
+          </Link>
+        </div>
       </div>
-    </div>
+    </section>
   );
 };
 

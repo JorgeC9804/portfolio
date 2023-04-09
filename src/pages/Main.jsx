@@ -1,89 +1,47 @@
-import React, { useContext } from "react";
+import React, { useState, useContext, useEffect } from "react";
 import Context from "../context/Context";
+// import me from "../pictures/me.jpeg";
+// import Cube from "../utils/cube/cube";
+// import Test from "../test/Test";
+import "./main.style.css";
 
 const Main = () => {
-  const { state } = useContext(Context);
+  // const { state } = useContext(Context);
+  const aux = "Hi, I´m Jorge Castro !".split("");
+  let count = 0;
+  const [hello, setHello] = useState("");
+
+  /**
+   * necesito renderizar solo una parte
+   */
+
+  const handleShow = () => {
+    setHello("");
+    const interval = setInterval(() => {
+      console.log(aux[count]);
+      console.log(count);
+      count = count + 1;
+    }, 1000);
+
+    setTimeout(() => {
+      clearInterval(interval);
+    }, 5000);
+  };
+
+  useEffect(() => {
+    handleShow();
+  }, []);
 
   return (
-    <div className="dy center column main">
-      <div className="dy center-w shell" id="sec1">
-        <div //
-          className={`dy relative center-h ${
-            state ? `section-1` : `section-1-h`
-          } `}
-        >
-          <div className="section-1-name">
-            <div className="dy center-w column name-m">
-              <div>Hi, my</div>
-              <div>
-                name is <span className="my-name">Jorge.</span>
-              </div>
-            </div>
-            <div className="dy center information-m">
-              I'm Jorge Castro a interactive front-end and back-end developer
-              from Mexico.
-            </div>
-            {/* <a href="#saaas" className="relative t-3">
-              section
-            </a> */}
+    <div className="sec-main dy center">
+      <div>
+        <div className="dy center circle">
+          <div className="dy center me">
+            {/* <img src={me} alt="" className="img-me" /> */}
+            {hello}
           </div>
         </div>
-      </div>
-      <div className="dy center shell test" id="saaas">
-        <div
-          className={`dy relative center column ${
-            state ? `section-2` : `section-2-h`
-          }`}
-        >
-          <p>
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Commodi
-            eum recusandae mollitia accusantium quae eius doloribus iusto qui
-            amet, repudiandae illum consequatur ullam, natus assumenda velit,
-            quos accusamus laudantium necessitatibus.
-          </p>
-          <p>
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Commodi
-            eum recusandae mollitia accusantium quae eius doloribus iusto qui
-            amet, repudiandae illum consequatur ullam, natus assumenda velit,
-            quos accusamus laudantium necessitatibus.
-          </p>
-          <p>
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Commodi
-            eum recusandae mollitia accusantium quae eius doloribus iusto qui
-            amet, repudiandae illum consequatur ullam, natus assumenda velit,
-            quos accusamus laudantium necessitatibus.
-          </p>
-          <a href="#sec3">section</a>
-        </div>
-      </div>
-      <div className="dy center shell" id="sec3">
-        <div className="test-1">
-          <p>
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptate,
-            eligendi? Rerum dolore cupiditate dolorum reprehenderit similique
-            voluptatem delectus cumque soluta adipisci alias exercitationem
-            architecto eveniet consectetur totam, officia mollitia culpa?
-          </p>
-          <p>
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptate,
-            eligendi? Rerum dolore cupiditate dolorum reprehenderit similique
-            voluptatem delectus cumque soluta adipisci alias exercitationem
-            architecto eveniet consectetur totam, officia mollitia culpa?
-          </p>
-          <p>
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptate,
-            eligendi? Rerum dolore cupiditate dolorum reprehenderit similique
-            voluptatem delectus cumque soluta adipisci alias exercitationem
-            architecto eveniet consectetur totam, officia mollitia culpa?
-          </p>
-          <p>
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptate,
-            eligendi? Rerum dolore cupiditate dolorum reprehenderit similique
-            voluptatem delectus cumque soluta adipisci alias exercitationem
-            architecto eveniet consectetur totam, officia mollitia culpa?
-          </p>
-          <a href="#sec1">section</a>
-        </div>
+        <div></div>
       </div>
     </div>
   );

@@ -1,40 +1,69 @@
-.header {
-  width: 100%;
-  z-index: 100;
-}
 /* --------------- general ------------------ */
+
+/* --------------- horizontal ------------------ */
+.header-h {
+  position: fixed;
+  width: 100%;
+  height: 65px;
+  background-color: rgba(0, 0, 0, 0.815);
+  z-index: 99;
+  animation-name: header;
+  animation-duration: 4s;
+}
+/* --------------- btn ------------------ */
 .link {
   text-decoration: none;
+  color: black;
+  font-size: 17px;
   font-family: "Courier New", Courier, monospace;
-  color: white;
-  border: 1px solid;
-  height: 25px;
-  padding: 5px 15px;
-  margin: 15px;
-  border-radius: 8px;
-}
-/* --------------- horizontal ------------------ */
-.box-h {
-  background-color: rgba(0, 0, 0, 0.219);
-  width: 100%;
-  height: 90px;
-}
-
-/* --------------- vertical ------------------ */
-.box-v {
-  background-color: rgba(0, 0, 0, 0.525);
-  width: 90px;
-  height: 100vh;
-}
-
-/* --------------- btn ------------------ */
-.btn {
-  width: 80px;
-  background: rgba(0, 153, 255, 0.548);
-  color: white;
-  border: none;
+  background-color: greenyellow;
   border-radius: 5px;
-  font-size: 18px;
-  padding: 10px;
-  cursor: pointer;
+  width: 80px;
+  padding: 5px;
+  height: 27px;
+  animation-name: btn;
+  animation-duration: 5s;
+}
+.l-m-v {
+  margin-top: 50px;
+}
+.l-m-h {
+  margin: 10px;
+}
+.click-h {
+  /* background-color: rgb(0, 0, 0); */
+  height: 100%;
+}
+
+@keyframes header {
+  0% {
+    background-color: transparent;
+    top: 43vh;
+    color: transparent;
+  }
+  20% {
+    background-color: transparent;
+    color: transparent;
+  }
+  50% {
+    background-color: rgb(0, 0, 0);
+    color: transparent;
+    top: 43vh;
+  }
+  100% {
+    top: 0;
+  }
+}
+
+@keyframes btn {
+  0% {
+    background-color: transparent;
+    color: transparent;
+    border: 1px solid transparent;
+  }
+  40% {
+    background-color: transparent;
+    color: transparent;
+    border: 1px solid transparent;
+  }
 }
