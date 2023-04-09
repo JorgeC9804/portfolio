@@ -1,5 +1,5 @@
-import React, { useState, useContext, useEffect } from "react";
-import Context from "../context/Context";
+import React, { useState, useEffect } from "react";
+// import Context from "../context/Context";
 // import me from "../pictures/me.jpeg";
 // import Cube from "../utils/cube/cube";
 // import Test from "../test/Test";
@@ -30,7 +30,7 @@ const Main = () => {
 
   useEffect(() => {
     handleShow();
-  }, []);
+  }, [hello]);
 
   return (
     <div className="sec-main dy center">
